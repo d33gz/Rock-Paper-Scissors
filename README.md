@@ -1,0 +1,3 @@
+A basic Rock Paper Scissors App. Currently players can type a command. The 3 obvious ones are accepted, plus one cheat code.
+
+Since this isn't very impressive on it's own, the main goal is to expand it graphically. Having the computer player represented by an animated figure, a countdown, and with a little sound effects. Perhaps an online mode someday as well, but for now it will be a project to return to when I want to attempt implementing basic animation.
