@@ -2,17 +2,17 @@ const rock = document.getElementById("rock");
 const paper = document.getElementById("paper");
 const scissors = document.getElementById("scissors");
 
-function handleClickRock(rock) {
+rock.onclick = () => {
+  playGame('rock');
+};
 
-}
+paper.onclick = () => {
+  playGame('paper');
+};
 
-function handleClickPaper(paper) {
-  
-}
-
-function handleClickScissors(scissors) {
-  
-}
+scissors.onclick = () => {
+  playGame('scissors');
+};
 
 const getUserChoice = userInput => {
   userInput = userInput.toLowerCase();
@@ -71,4 +71,4 @@ const playGame = (choice) => {
 
 //Testing Department
 
-console.log(playGame('bomb'));
+//console.log(playGame('bomb'));
