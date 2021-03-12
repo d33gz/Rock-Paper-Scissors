@@ -1,3 +1,19 @@
+const rock = document.getElementById("rock");
+const paper = document.getElementById("paper");
+const scissors = document.getElementById("scissors");
+
+function handleClickRock(rock) {
+
+}
+
+function handleClickRock(paper) {
+  
+}
+
+function handleClickRock(scissors) {
+  
+}
+
 const getUserChoice = userInput => {
   userInput = userInput.toLowerCase();
   if (userInput === 'rock' || userInput === 'paper' || userInput === 'scissors' || userInput === 'bomb') {
@@ -50,7 +66,9 @@ const determineWinner = (userChoice, computerChoice) => {
 const playGame = (choice) => {
   userChoice = getUserChoice(choice);
   computerChoice = getComputerChoice();
-  console.log(determineWinner(userChoice, computerChoice));
+  alert(determineWinner(userChoice, computerChoice));
 };
 
-playGame('bomb');
+//Testing Department
+
+console.log(playGame('bomb'));
