@@ -1,6 +1,7 @@
 const rock = document.getElementById("rock");
 const paper = document.getElementById("paper");
 const scissors = document.getElementById("scissors");
+const bomb = document.getElementById("header");
 
 rock.onclick = () => {
   playGame('rock');
@@ -12,6 +13,10 @@ paper.onclick = () => {
 
 scissors.onclick = () => {
   playGame('scissors');
+};
+
+bomb.onclick = () => {
+  playGame('bomb');
 };
 
 const getUserChoice = userInput => {
