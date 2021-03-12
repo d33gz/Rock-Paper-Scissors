@@ -2,6 +2,7 @@ const rock = document.getElementById("rock");
 const paper = document.getElementById("paper");
 const scissors = document.getElementById("scissors");
 const bomb = document.getElementById("header");
+const robot = document.getElementById("robot");
 
 rock.onclick = () => {
   playGame('rock');
@@ -39,6 +40,10 @@ const getComputerChoice = () => {
   };
 };
 
+const setRobotImage = (computerChoice) => {
+  robot.src =`./images/robot_${computerChoice}.png`;
+};
+
 const determineWinner = (userChoice, computerChoice) => {
   console.log(userChoice);
   console.log(computerChoice);
@@ -71,7 +76,8 @@ const determineWinner = (userChoice, computerChoice) => {
 const playGame = (choice) => {
   userChoice = getUserChoice(choice);
   computerChoice = getComputerChoice();
-  alert(determineWinner(userChoice, computerChoice));
+  setRobotImage(computerChoice);
+  console.log(determineWinner(userChoice, computerChoice));
 };
 
 //Testing Department
