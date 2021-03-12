@@ -6,11 +6,11 @@ function handleClickRock(rock) {
 
 }
 
-function handleClickRock(paper) {
+function handleClickPaper(paper) {
   
 }
 
-function handleClickRock(scissors) {
+function handleClickScissors(scissors) {
   
 }
 
