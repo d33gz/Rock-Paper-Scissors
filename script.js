@@ -3,6 +3,9 @@ const paper = document.getElementById("paper");
 const scissors = document.getElementById("scissors");
 const bomb = document.getElementById("header");
 const robot = document.getElementById("robot");
+const results = document.getElementById("results");
+console.log('Es Rock?' + rock);
+console.log('Es Results?' + results);
 
 rock.onclick = () => {
   playGame('rock');
@@ -48,12 +51,15 @@ const determineWinner = (userChoice, computerChoice) => {
   console.log(userChoice);
   console.log(computerChoice);
   if (userChoice === computerChoice) {
-    return 'Tie Game!';
+    results.innerHTML = "Tie Game!";
+    return "Tie Game!";
   };
   if (userChoice === 'rock') {
     if (computerChoice === 'scissors') {
+      results.innerHTML = "Victory... Humanity!";
       return "Victory... Humanity!";
     } else {
+      results.innerHTML = "Victory... Tecnology!";
       return "Victory... Technology!";
     };
   } else if (userChoice === 'paper') {
