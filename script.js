@@ -3,9 +3,9 @@ const paper = document.getElementById("paper");
 const scissors = document.getElementById("scissors");
 const bomb = document.getElementById("header");
 const robot = document.getElementById("robot");
+const playerPick = document.getElementById("playerPick");
+const computerPick = document.getElementById("computerPick");
 const results = document.getElementById("results");
-console.log('Es Rock?' + rock);
-console.log('Es Results?' + results);
 
 rock.onclick = () => {
   playGame('rock');
@@ -48,34 +48,32 @@ const setRobotImage = (computerChoice) => {
 };
 
 const determineWinner = (userChoice, computerChoice) => {
-  console.log(userChoice);
-  console.log(computerChoice);
+  playerPick.innerHTML = `Humanity plays... ${userChoice}!`;
+  computerPick.innerHTML = `Technology plays... ${computerChoice}!`;
   if (userChoice === computerChoice) {
     results.innerHTML = "Tie Game!";
-    return "Tie Game!";
+    return;
   };
   if (userChoice === 'rock') {
     if (computerChoice === 'scissors') {
       results.innerHTML = "Victory... Humanity!";
-      return "Victory... Humanity!";
     } else {
       results.innerHTML = "Victory... Tecnology!";
-      return "Victory... Technology!";
     };
   } else if (userChoice === 'paper') {
-      if (computerChoice === 'rock') {
-        return "Victory... Humanity!";
+    if (computerChoice === 'rock') {
+      results.innerHTML = "Victory... Humanity!";
     } else {
-      return "Victory... Technology!";
+      results.innerHTML = "Victory... Tecnology!";
     };
   } else if (userChoice === 'scissors') {
     if (computerChoice === 'paper') {
-      return "Victory... Humanity!";
+      results.innerHTML = "Victory... Humanity!";
     } else {
-      return "Victory... Technology!";
+      results.innerHTML = "Victory... Tecnology!";
     };
   } else {
-    return "So, you know the secrets of this world..."
+    results.innerHTML = "So, you know the secrets of this world...";
   };
 };
 
@@ -83,7 +81,7 @@ const playGame = (choice) => {
   userChoice = getUserChoice(choice);
   computerChoice = getComputerChoice();
   setRobotImage(computerChoice);
-  console.log(determineWinner(userChoice, computerChoice));
+  determineWinner(userChoice, computerChoice);
 };
 
 //Testing Department
