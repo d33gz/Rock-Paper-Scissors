@@ -2,3 +2,20 @@ body {
     background-image: linear-gradient(120deg, darkgrey, lightgrey, grey, darkgrey);
     text-align: center;
 }
+
+header {
+    height: 15vh;
+}
+
+article {
+    height: 75vh;
+}
+
+footer {
+    height: 10vh;
+}
+
+img {
+    display: flex;
+    margin: auto;
+}
