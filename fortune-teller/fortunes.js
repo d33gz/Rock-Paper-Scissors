@@ -1,0 +1,1 @@
+//Fortunes from fortune-magic.js will go here after I do the JavaScript Lesson on Modules
